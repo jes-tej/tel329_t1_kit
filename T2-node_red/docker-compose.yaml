@@ -1,0 +1,21 @@
+################################################################################
+# Node-RED Stack or Compose
+################################################################################
+# docker stack deploy node-red --compose-file docker-compose-node-red.yml
+# docker-compose -f docker-compose-node-red.yml -p myNoderedProject up
+################################################################################
+version: "3.7"
+
+services:
+  node-red:
+    build: .  # Usa el Dockerfile en el directorio actual para construir la imagen
+    environment:
+      - TZ=America/Santiago
+    ports:
+      - "18800:1880"
+    network_mode: bridge
+    volumes:
+      - ./node-red-data:/data
+
+volumes:
+  node-red-data:
