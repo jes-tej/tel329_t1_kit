@@ -1,0 +1,22 @@
+2024-11-11 12:48:02,462 - INFO - Temperatura leída: 18 °C
+2024-11-11 12:48:03,037 - ERROR - Error al enviar datos a ThingSpeak: 400
+2024-11-11 12:48:06,435 - ERROR - Error al enviar datos a ThingSpeak (UTFSM): 400
+2024-11-11 12:48:08,756 - INFO - Programa detenido por el usuario.
+2024-11-11 12:48:08,765 - INFO - Conexión serial cerrada.
+2024-11-11 12:48:51,468 - INFO - Temperatura leída: 18 °C
+2024-11-11 12:48:51,992 - ERROR - Error al enviar datos a ThingSpeak: 400
+2024-11-11 12:51:12,515 - INFO - Temperatura leída: 18 °C
+2024-11-11 12:51:13,019 - INFO - Datos enviados a ThingSpeak con éxito a Private Channel.
+2024-11-11 12:51:16,517 - ERROR - Error al enviar datos a ThingSpeak (UTFSM): 400
+2024-11-11 12:51:40,478 - INFO - Temperatura leída: 18 °C
+2024-11-11 12:51:41,043 - INFO - Datos enviados a ThingSpeak con éxito a Private Channel.
+2024-11-11 12:51:44,473 - INFO - Datos enviados a ThingSpeak con éxito a UTFSM Labs TEL329.
+2024-11-11 12:52:57,590 - INFO - Temperatura leída: 19 °C
+2024-11-11 12:52:58,026 - INFO - Datos enviados a ThingSpeak con éxito a Private Channel.
+2024-11-11 12:53:01,518 - INFO - Datos enviados a ThingSpeak con éxito a UTFSM Labs TEL329.
+2024-11-11 12:53:39,586 - INFO - Temperatura leída: 18 °C
+2024-11-11 12:53:40,026 - INFO - Datos enviados a ThingSpeak con éxito a Private Channel.
+2024-11-11 12:53:43,460 - INFO - Datos enviados a ThingSpeak con éxito a UTFSM Labs TEL329.
+2024-11-11 12:54:58,474 - INFO - Temperatura leída: 19 °C
+2024-11-11 12:54:59,080 - INFO - Datos enviados a ThingSpeak con éxito a Private Channel.
+2024-11-11 12:55:02,582 - INFO - Datos enviados a ThingSpeak con éxito a UTFSM Labs TEL329.

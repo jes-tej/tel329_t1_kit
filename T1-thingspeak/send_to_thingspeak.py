@@ -3,7 +3,7 @@ import serial
 import requests
 import time
 import logging
-import os
+from decouple import config
 
 # Configuración de logs
 logging.basicConfig(
@@ -14,16 +14,17 @@ logging.basicConfig(
 # Configura el puerto serial (ajusta COM5 a tu puerto correcto)
 
 # Configura el puerto serial
-SERIAL_PORT = '/dev/ttyACM0'  # Cambia esto si usas Windows, usualmente COM3, COM4, etc.
+SERIAL_PORT = 'COM7'  # Cambia esto si usas Windows, usualmente COM3, COM4, etc.
 BAUD_RATE = 115200  # Asegúrate de que coincida con el Pico
-THINGSPEAK_API_KEY = os.getenv('THINGSPEAK_API_KEY')
-THINGSPEAK_API_KEY_UTFSM = os.getenv('THINGSPEAK_API_KEY_UTFSM')
+THINGSPEAK_API_KEY =config('THINGSPEAK_API_KEY')
+
+THINGSPEAK_API_KEY_UTFSM = config('THINGSPEAK_API_KEY_UTFSM')
 
 ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
 time.sleep(2)  # Espera para estabilizar la conexión
 
 def enviar_a_thingspeak(temperatura):
-    url = f"https://api.thingspeak.com/update?api_key={THINGSPEAK_API_KEY}&field6={temperatura}"
+    url = f"https://api.thingspeak.com/update?api_key={THINGSPEAK_API_KEY}&field1={temperatura}"
     url_wsn = f"https://api.thingspeak.com/update?api_key={THINGSPEAK_API_KEY_UTFSM}&field6={temperatura}"
 
     try:
@@ -58,7 +59,7 @@ try:
                 logging.info(f"Temperatura leída: {temperatura} °C")
                 print(f"Temperatura leída: {temperatura} °C")
                 enviar_a_thingspeak(temperatura)
-                time.sleep(150)  # Respeta el límite de actualización de ThingSpeak (45 segundos mínimo) | (5*60)
+                time.sleep(75)  # Respeta el límite de actualización de ThingSpeak (45 segundos mínimo) | (5*60)
             else:
                 logging.info(f"Read Failed!")
                 print(f"Read Failed!")
